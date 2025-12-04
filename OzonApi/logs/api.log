@@ -333,3 +333,9 @@ pip install python-multipart
 2025-12-04 22:36:24,229 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
 2025-12-04 22:36:42,599 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
 2025-12-04 22:37:31,274 - app.crud - INFO - Fetching customer with ID: 207e6b98-4448-4698-939d-9fbedf898802
+2025-12-04 23:10:53,594 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\04a2b1f2-6450-47ca-9bc5-260dffbec5c8_basic_customers.csv
+2025-12-04 23:10:53,595 - app.etl.orchestrator - ERROR - Ошибка при обработке файла клиентов data/input\04a2b1f2-6450-47ca-9bc5-260dffbec5c8_basic_customers.csv: Файл не найден: C:\Users\staru\Downloads\Ozon\OzonApi\data\input\data/input\04a2b1f2-6450-47ca-9bc5-260dffbec5c8_basic_customers.csv
+2025-12-04 23:11:54,521 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
+2025-12-04 23:11:54,521 - app.etl.orchestrator - ERROR - Ошибка при обработке файла клиентов data/input\84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv: Файл не найден: C:\Users\staru\Downloads\Ozon\OzonApi\data\input\data/input\84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
+2025-12-04 23:12:00,979 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
+2025-12-04 23:12:00,980 - app.etl.orchestrator - ERROR - Ошибка при обработке файла клиентов data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv: Файл не найден: C:\Users\staru\Downloads\Ozon\OzonApi\data\input\data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv

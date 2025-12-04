@@ -26,8 +26,13 @@ class DataExtractor:
     def extract_from_csv(self, file_path: str, **kwargs) -> pd.DataFrame:
         """Извлечение данных из CSV файла"""
         try:
-            df = pd.read_csv(file_path, **kwargs)
+            df = pd.read_csv(file_path, encoding='utf-8', **kwargs)
             logger.info(f"Успешно извлечено {len(df)} записей из CSV: {file_path}")
+            return df
+        except UnicodeDecodeError:
+            # Пробуем другую кодировку
+            df = pd.read_csv(file_path, encoding='cp1251', **kwargs)
+            logger.info(f"Успешно извлечено {len(df)} записей из CSV (cp1251): {file_path}")
             return df
         except Exception as e:
             logger.error(f"Ошибка при чтении CSV файла {file_path}: {str(e)}")
@@ -45,18 +50,34 @@ class DataExtractor:
 
     def extract_data(self, file_path: str, **kwargs) -> pd.DataFrame:
         """Универсальный метод извлечения данных"""
-        if not os.path.isabs(file_path):
-            file_path = os.path.join(etl_config.INPUT_DIR, file_path)
 
-        if not os.path.exists(file_path):
-            raise FileNotFoundError(f"Файл не найден: {file_path}")
+        # Нормализуем путь
+        file_path = os.path.normpath(file_path)
 
-        if file_path.lower().endswith('.csv'):
-            return self.extract_from_csv(file_path, **kwargs)
-        elif file_path.lower().endswith(('.xlsx', '.xls')):
-            return self.extract_from_excel(file_path, **kwargs)
+        # Если путь абсолютный - используем как есть
+        if os.path.isabs(file_path):
+            full_path = file_path
+        # Если путь уже содержит data/input или data\input - используем как есть
+        elif 'data' + os.sep + 'input' in file_path or 'data/input' in file_path:
+            full_path = file_path
         else:
-            raise ValueError(f"Неподдерживаемый формат файла: {file_path}")
+            # Иначе добавляем префикс
+            full_path = os.path.join(etl_config.INPUT_DIR, file_path)
+
+        # Финальная нормализация
+        full_path = os.path.normpath(full_path)
+
+        logger.info(f"Попытка чтения файла: {full_path}")
+
+        if not os.path.exists(full_path):
+            raise FileNotFoundError(f"Файл не найден: {full_path}")
+
+        if full_path.lower().endswith('.csv'):
+            return self.extract_from_csv(full_path, **kwargs)
+        elif full_path.lower().endswith(('.xlsx', '.xls')):
+            return self.extract_from_excel(full_path, **kwargs)
+        else:
+            raise ValueError(f"Неподдерживаемый формат файла: {full_path}")
 
 
 class CustomerDataExtractor(DataExtractor):
@@ -67,7 +88,7 @@ class CustomerDataExtractor(DataExtractor):
         df = self.extract_data(file_path)
         df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
         df = df.dropna(how='all')
-        logger.info(f"Извлечены данные клиентов: {len(df)} записей")
+        logger.info(f"Извлечены данные клиентов: {len(df)} записей, колонки: {list(df.columns)}")
         return df
 
 
@@ -76,7 +97,11 @@ class ProductDataExtractor(DataExtractor):
 
     def extract_products_data(self, file_path: str, sheet_name='Products') -> pd.DataFrame:
         """Извлечение данных товаров"""
-        df = self.extract_data(file_path, sheet_name=sheet_name)
+        try:
+            df = self.extract_data(file_path, sheet_name=sheet_name)
+        except:
+            # Если не Excel или нет такого листа - читаем как обычный файл
+            df = self.extract_data(file_path)
         df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
         df = df.dropna(how='all')
         logger.info(f"Извлечены данные товаров: {len(df)} записей")
@@ -88,7 +113,10 @@ class OrderDataExtractor(DataExtractor):
 
     def extract_orders_data(self, file_path: str, sheet_name='Orders') -> pd.DataFrame:
         """Извлечение данных заказов"""
-        df = self.extract_data(file_path, sheet_name=sheet_name)
+        try:
+            df = self.extract_data(file_path, sheet_name=sheet_name)
+        except:
+            df = self.extract_data(file_path)
         df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
         df = df.dropna(how='all')
         logger.info(f"Извлечены данные заказов: {len(df)} записей")
@@ -96,7 +124,10 @@ class OrderDataExtractor(DataExtractor):
 
     def extract_order_items_data(self, file_path: str, sheet_name='OrderItems') -> pd.DataFrame:
         """Извлечение данных позиций заказов"""
-        df = self.extract_data(file_path, sheet_name=sheet_name)
+        try:
+            df = self.extract_data(file_path, sheet_name=sheet_name)
+        except:
+            df = self.extract_data(file_path)
         df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
         df = df.dropna(how='all')
         logger.info(f"Извлечены данные позиций заказов: {len(df)} записей")

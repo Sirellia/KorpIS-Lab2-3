@@ -339,3 +339,37 @@ pip install python-multipart
 2025-12-04 23:11:54,521 - app.etl.orchestrator - ERROR - Ошибка при обработке файла клиентов data/input\84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv: Файл не найден: C:\Users\staru\Downloads\Ozon\OzonApi\data\input\data/input\84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
 2025-12-04 23:12:00,979 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
 2025-12-04 23:12:00,980 - app.etl.orchestrator - ERROR - Ошибка при обработке файла клиентов data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv: Файл не найден: C:\Users\staru\Downloads\Ozon\OzonApi\data\input\data/input\9d837f18-01af-48a6-8a45-3862fe04a112_84631c0a-b8da-497c-a9f7-4f6c80a101a8_basic_customers.csv
+2025-12-04 23:17:52,324 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\e6317a1f-d94e-4d5a-9287-fe8863f8ae30_basic_customers.csv
+2025-12-04 23:17:52,324 - app.etl.extractors - INFO - Попытка чтения файла: data\input\e6317a1f-d94e-4d5a-9287-fe8863f8ae30_basic_customers.csv
+2025-12-04 23:17:52,327 - app.etl.extractors - INFO - Успешно извлечено 7 записей из CSV: data\input\e6317a1f-d94e-4d5a-9287-fe8863f8ae30_basic_customers.csv
+2025-12-04 23:17:52,328 - app.etl.extractors - INFO - Извлечены данные клиентов: 7 записей, колонки: ['full_name', 'email', 'phone', 'address']
+2025-12-04 23:17:52,329 - app.etl.transformers - INFO - Трансформация клиентов: 1 валидных, 6 с ошибками
+2025-12-04 23:17:52,362 - app.crud - INFO - Creating customer: Младшев Антон Иванович
+2025-12-04 23:17:52,369 - app.crud - INFO - Customer created with ID: 4a25bc17-fad1-4fa1-bf14-3c044e622c9d
+2025-12-04 23:17:52,369 - app.etl.loaders - INFO - Загрузка клиентов завершена: {'total_processed': 1, 'customers_created': 1, 'errors': []}
+2025-12-04 23:17:52,371 - app.etl.loaders - INFO - Отчет об ошибках сохранен: C:\Users\staru\Downloads\Ozon\OzonApi\data\errors\customers_errors_20251204_231752.csv
+2025-12-04 23:17:52,371 - app.etl.orchestrator - INFO - Обработка клиентов завершена: 1 успешно, 6 с ошибками
+2025-12-04 23:17:53,796 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\fc4a9b52-1132-496a-9669-bffa979a9a8a_basic_customers.csv
+2025-12-04 23:17:53,796 - app.etl.extractors - INFO - Попытка чтения файла: data\input\fc4a9b52-1132-496a-9669-bffa979a9a8a_basic_customers.csv
+2025-12-04 23:17:53,797 - app.etl.extractors - INFO - Успешно извлечено 7 записей из CSV: data\input\fc4a9b52-1132-496a-9669-bffa979a9a8a_basic_customers.csv
+2025-12-04 23:17:53,797 - app.etl.extractors - INFO - Извлечены данные клиентов: 7 записей, колонки: ['full_name', 'email', 'phone', 'address']
+2025-12-04 23:17:53,799 - app.etl.transformers - INFO - Трансформация клиентов: 1 валидных, 6 с ошибками
+2025-12-04 23:17:53,800 - app.etl.loaders - INFO - Загрузка клиентов завершена: {'total_processed': 1, 'customers_created': 0, 'errors': []}
+2025-12-04 23:17:53,801 - app.etl.loaders - INFO - Отчет об ошибках сохранен: C:\Users\staru\Downloads\Ozon\OzonApi\data\errors\customers_errors_20251204_231753.csv
+2025-12-04 23:17:53,801 - app.etl.orchestrator - INFO - Обработка клиентов завершена: 1 успешно, 6 с ошибками
+2025-12-04 23:29:53,344 - app.etl.orchestrator - INFO - Начало обработки файла клиентов: data/input\c8f519e8-86f4-4e0b-b83a-1e6f7c3ea9b5_basic_customers.csv
+2025-12-04 23:29:53,344 - app.etl.extractors - INFO - Попытка чтения файла: data\input\c8f519e8-86f4-4e0b-b83a-1e6f7c3ea9b5_basic_customers.csv
+2025-12-04 23:29:53,346 - app.etl.extractors - INFO - Успешно извлечено 7 записей из CSV: data\input\c8f519e8-86f4-4e0b-b83a-1e6f7c3ea9b5_basic_customers.csv
+2025-12-04 23:29:53,346 - app.etl.extractors - INFO - Извлечены данные клиентов: 7 записей, колонки: ['full_name', 'email', 'phone', 'address']
+2025-12-04 23:29:53,347 - app.etl.orchestrator - INFO - Извлечено записей: 7
+2025-12-04 23:29:53,348 - app.etl.transformers - INFO - Трансформация клиентов: 1 валидных, 6 с ошибками
+2025-12-04 23:29:53,348 - app.etl.orchestrator - INFO - Валидных: 1, С ошибками: 6
+2025-12-04 23:29:53,373 - app.crud - INFO - Creating customer: Младшев Антон Иванович
+2025-12-04 23:29:53,378 - app.crud - INFO - Customer created with ID: 0c1ef8e8-58a7-4a9a-9276-56efeb55555e
+2025-12-04 23:29:53,378 - app.etl.loaders - INFO - Создан клиент: Младшев Антон Иванович (ivan@mail.ru)
+2025-12-04 23:29:53,378 - app.etl.loaders - INFO - Загрузка клиентов завершена: создано 1, пропущено 0
+2025-12-04 23:29:53,380 - app.etl.loaders - INFO - Отчет об ошибках сохранен: C:\Users\staru\Downloads\Ozon\OzonApi\data\errors\customers_errors_20251204_232953.csv
+2025-12-04 23:29:53,380 - app.etl.loaders - INFO - Сводка об ошибках сохранена: C:\Users\staru\Downloads\Ozon\OzonApi\data\errors\customers_errors_summary_20251204_232953.json
+2025-12-04 23:29:53,380 - app.etl.orchestrator - INFO - Сохранен отчет об ошибках: 6 записей
+2025-12-04 23:29:53,380 - app.etl.orchestrator - INFO - Обработка клиентов завершена: 1 успешно, 6 с ошибками
+2025-12-04 23:29:53,381 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: C:\Users\staru\Downloads\Ozon\OzonApi\data\output\etl_report_20251204_232953.json

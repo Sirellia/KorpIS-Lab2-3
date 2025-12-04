@@ -40,20 +40,25 @@ class ETLOrchestrator:
             'orders': OrderDataLoader(db)
         }
 
-        self.customer_mapping = {}  # email -> customer_id
+        self.customer_mapping = {}
 
     def process_customers_file(self, file_path: str):
         """Обработка файла с данными клиентов"""
         logger.info(f"Начало обработки файла клиентов: {file_path}")
 
         try:
+            # Нормализуем путь
+            normalized_path = os.path.normpath(file_path)
+
             # Extract
             extractor = self.extractors['customers']
-            raw_data = extractor.extract_customers_data(file_path)
+            raw_data = extractor.extract_customers_data(normalized_path)
+            logger.info(f"Извлечено записей: {len(raw_data)}")
 
             # Transform
             transformer = self.transformers['customers']
             valid_data, errors_data = transformer.transform_customer_data(raw_data)
+            logger.info(f"Валидных: {len(valid_data)}, С ошибками: {len(errors_data)}")
 
             # Load
             loader = self.loaders['customers']
@@ -62,6 +67,7 @@ class ETLOrchestrator:
             # Сохранение ошибок
             if not errors_data.empty:
                 loader.save_errors_report(errors_data, file_path, 'customers')
+                logger.info(f"Сохранен отчет об ошибках: {len(errors_data)} записей")
 
             # Статистика
             self.stats['customers'] = {
@@ -73,6 +79,9 @@ class ETLOrchestrator:
 
             logger.info(f"Обработка клиентов завершена: {len(valid_data)} успешно, {len(errors_data)} с ошибками")
 
+            # Сохраняем итоговый отчёт
+            self._save_final_report()
+
         except Exception as e:
             logger.error(f"Ошибка при обработке файла клиентов {file_path}: {str(e)}")
             self.stats['customers'] = {'error': str(e), 'total_processed': 0}
@@ -82,8 +91,10 @@ class ETLOrchestrator:
         logger.info(f"Начало обработки файла товаров: {file_path}")
 
         try:
+            normalized_path = os.path.normpath(file_path)
+
             extractor = self.extractors['products']
-            raw_data = extractor.extract_products_data(file_path)
+            raw_data = extractor.extract_products_data(normalized_path)
 
             transformer = self.transformers['products']
             valid_data, errors_data = transformer.transform_product_data(raw_data)
@@ -102,6 +113,7 @@ class ETLOrchestrator:
             }
 
             logger.info(f"Обработка товаров завершена: {len(valid_data)} успешно")
+            self._save_final_report()
 
         except Exception as e:
             logger.error(f"Ошибка при обработке файла товаров {file_path}: {str(e)}")
@@ -112,8 +124,10 @@ class ETLOrchestrator:
         logger.info(f"Начало обработки файла заказов: {file_path}")
 
         try:
+            normalized_path = os.path.normpath(file_path)
+
             extractor = self.extractors['orders']
-            raw_data = extractor.extract_orders_data(file_path)
+            raw_data = extractor.extract_orders_data(normalized_path)
 
             transformer = self.transformers['orders']
             valid_data, errors_data = transformer.transform_order_data(raw_data, self.customer_mapping)
@@ -132,6 +146,7 @@ class ETLOrchestrator:
             }
 
             logger.info(f"Обработка заказов завершена: {len(valid_data)} успешно")
+            self._save_final_report()
 
         except Exception as e:
             logger.error(f"Ошибка при обработке файла заказов {file_path}: {str(e)}")
@@ -143,7 +158,6 @@ class ETLOrchestrator:
         logger.info("Запуск ETL-конвейера OzonLogistics")
         logger.info("=" * 50)
 
-        # Получаем список файлов
         extractor = self.extractors['customers']
         files = extractor.list_available_files()
 
@@ -151,10 +165,8 @@ class ETLOrchestrator:
             logger.warning("Нет файлов для обработки в директории input")
             return self.stats
 
-        # Обрабатываем каждый файл
         for file in files:
             logger.info(f"Обработка файла: {file}")
-
             file_lower = file.lower()
 
             if 'customer' in file_lower or 'клиент' in file_lower:
@@ -166,10 +178,7 @@ class ETLOrchestrator:
             else:
                 logger.warning(f"Неизвестный тип файла: {file}")
 
-        # Визуализация результатов
         self._create_visualizations()
-
-        # Сохранение итогового отчета
         self._save_final_report()
 
         logger.info("=" * 50)
@@ -185,6 +194,9 @@ class ETLOrchestrator:
                 logger.warning("Нет данных для визуализации")
                 return
 
+            # Создаём директорию
+            os.makedirs(etl_config.OUTPUT_DIR, exist_ok=True)
+
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             dashboard_path = os.path.join(etl_config.OUTPUT_DIR, f"etl_dashboard_{timestamp}.png")
 
@@ -196,11 +208,15 @@ class ETLOrchestrator:
     def _save_final_report(self):
         """Сохранение итогового отчета"""
         try:
+            # Создаём директорию
+            os.makedirs(etl_config.OUTPUT_DIR, exist_ok=True)
+
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             report_path = os.path.join(etl_config.OUTPUT_DIR, f"etl_report_{timestamp}.json")
 
             report = {
                 'timestamp': timestamp,
+                'generated_at': datetime.now().isoformat(),
                 'statistics': self.stats,
                 'summary': self._generate_summary()
             }
@@ -225,8 +241,6 @@ class ETLOrchestrator:
                 total_processed += process_stats.get('total_processed', 0)
                 total_valid += process_stats.get('valid_records', 0)
                 total_errors += process_stats.get('error_records', 0)
-
-                # Суммируем созданные записи
                 total_created += process_stats.get('customers_created', 0)
                 total_created += process_stats.get('products_created', 0)
                 total_created += process_stats.get('orders_created', 0)
@@ -247,37 +261,3 @@ class ETLOrchestrator:
             'stats': self.stats,
             'summary': self._generate_summary()
         }
-
-    def process_single_file(self, file_path: str, file_type: str = 'auto'):
-        """
-        Обработка одного файла
-
-        Args:
-            file_path: путь к файлу
-            file_type: тип файла ('customers', 'products', 'orders', 'auto')
-        """
-        logger.info(f"Обработка файла: {file_path}, тип: {file_type}")
-
-        if file_type == 'auto':
-            file_lower = file_path.lower()
-            if 'customer' in file_lower or 'клиент' in file_lower:
-                file_type = 'customers'
-            elif 'product' in file_lower or 'товар' in file_lower:
-                file_type = 'products'
-            elif 'order' in file_lower or 'заказ' in file_lower:
-                file_type = 'orders'
-            else:
-                logger.error(f"Не удалось определить тип файла: {file_path}")
-                return {'error': 'Unknown file type'}
-
-        if file_type == 'customers':
-            self.process_customers_file(file_path)
-        elif file_type == 'products':
-            self.process_products_file(file_path)
-        elif file_type == 'orders':
-            self.process_orders_file(file_path)
-        else:
-            logger.error(f"Неизвестный тип файла: {file_type}")
-            return {'error': f'Unknown file type: {file_type}'}
-
-        return self.get_statistics()

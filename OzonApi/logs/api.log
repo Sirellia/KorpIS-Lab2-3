@@ -1,0 +1,335 @@
+2025-10-03 23:53:14,859 - app.crud - INFO - Fetching passengers with skip: 0, limit: 100
+2025-10-03 23:53:56,694 - app.crud - INFO - Fetching passengers with skip: 1, limit: 10
+2025-10-03 23:54:56,037 - app.crud - INFO - Fetching passenger with ID: d995ff83-6d1f-48a6-9c83-035d9df08257
+2025-10-03 23:56:48,505 - root - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-03 23:57:22,048 - root - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-03 23:57:49,965 - app.crud - INFO - Fetching passenger with ID: d995ff83-6d1f-48a6-9c83-035d9df08257
+2025-10-03 23:58:09,797 - app.crud - INFO - Fetching passenger with ID: 20866dc2-1d17-46af-adac-b8af71fec248
+2025-10-03 23:59:18,610 - root - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-04 00:03:16,408 - app.crud - INFO - Fetching passenger with ID: d995ff83-6d1f-48a6-9c83-035d9df08257
+2025-10-04 00:03:40,020 - app.crud - INFO - Fetching passenger with ID: 78eb3e68-e302-4536-a4b7-5244f5212984
+2025-10-04 00:41:05,621 - root - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-04 11:51:18,708 - app.crud - INFO - Fetching passenger with ID: 78eb3e68-e302-4536-a4b7-5244f5212984
+2025-10-04 18:25:56,856 - app.crud - INFO - Fetching passenger with ID: d995ff83-6d1f-48a6-9c83-035d9df08257
+2025-10-05 11:00:07,386 - app.crud - INFO - Creating passenger: string string
+2025-10-05 11:00:07,456 - app.crud - INFO - Passenger created with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:01:25,592 - app.crud - INFO - Fetching passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:01:45,864 - app.crud - INFO - Fetching passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6d
+2025-10-05 11:01:45,866 - app.routers.passengers - WARNING - Passenger with id 355739b9-ef78-4512-b546-b1f6ef26ec6d not found
+2025-10-05 11:02:02,153 - app.crud - INFO - Fetching passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:02:31,602 - app.crud - INFO - Updating passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:02:31,602 - app.crud - INFO - Fetching passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:02:31,637 - app.crud - INFO - Passenger with ID 355739b9-ef78-4512-b546-b1f6ef26ec6b updated successfully
+2025-10-05 11:02:55,240 - app.crud - INFO - Deleting passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:02:55,241 - app.crud - INFO - Fetching passenger with ID: 355739b9-ef78-4512-b546-b1f6ef26ec6b
+2025-10-05 11:02:55,279 - app.crud - INFO - Passenger with ID 355739b9-ef78-4512-b546-b1f6ef26ec6b deleted successfully
+2025-10-05 11:03:33,080 - app.crud - INFO - Fetching passengers with skip: 0, limit: 3
+2025-10-05 11:04:14,129 - app.crud - INFO - Fetching passengers with skip: 1, limit: 3
+2025-10-05 11:04:33,044 - app.crud - INFO - Fetching flights with skip: 0, limit: 3
+2025-10-05 11:24:57,963 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2025-10-05 11:24:59,177 - matplotlib.font_manager - INFO - generated new fontManager
+2025-10-05 11:24:59,499 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 11:24:59,499 - __main__ - INFO - Запуск ETL-конвейера
+2025-10-05 11:24:59,500 - app.etl.extractors - INFO - Найдено файлов для обработки: []
+2025-10-05 11:24:59,500 - __main__ - WARNING - Нет файлов для обработки
+2025-10-05 11:28:49,503 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 11:28:49,504 - __main__ - INFO - Запуск ETL-конвейера
+2025-10-05 11:28:49,504 - app.etl.extractors - INFO - Найдено файлов для обработки: ['test_flights.xlsx', 'test_passengers.csv']
+2025-10-05 11:28:49,504 - __main__ - INFO - Обработка файла: test_flights.xlsx
+2025-10-05 11:28:49,504 - __main__ - INFO - Начало обработки файла рейсов: test_flights.xlsx
+2025-10-05 11:28:49,678 - app.etl.extractors - INFO - Успешно извлечено 6 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 11:28:49,678 - app.etl.extractors - INFO - Извлечены данные рейсов: 6 записей
+2025-10-05 11:28:49,683 - app.etl.transformers - INFO - Трансформация рейсов завершена: 2 валидных, 4 с ошибками
+2025-10-05 11:28:49,684 - app.crud - INFO - Creating flight: SU-1001
+2025-10-05 11:28:49,941 - app.crud - INFO - Flight created with ID: 2c0e95ec-a54c-416e-b413-870801d35d86
+2025-10-05 11:28:49,941 - app.crud - INFO - Creating flight: SU-1002
+2025-10-05 11:28:49,944 - app.crud - INFO - Flight created with ID: afa56300-b1a2-4d85-906b-a145f2b14fa9
+2025-10-05 11:28:49,945 - app.etl.loaders - INFO - Загрузка рейсов завершена: {'total_processed': 2, 'flights_created': 2, 'errors': []}
+2025-10-05 11:28:49,947 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\flights_errors_20251005_112849.csv
+2025-10-05 11:28:49,951 - app.etl.extractors - INFO - Успешно извлечено 5 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 11:28:49,952 - app.etl.extractors - INFO - Извлечены данные тарифов: 5 записей
+2025-10-05 11:28:49,953 - app.etl.transformers - INFO - Трансформация тарифов завершена: 4 валидных, 1 с ошибками
+2025-10-05 11:28:49,953 - app.crud - INFO - Creating fare for flight: 2c0e95ec-a54c-416e-b413-870801d35d86
+2025-10-05 11:28:49,971 - app.crud - INFO - Fare created with ID: c89a0091-735c-4a13-9e8d-96a0e2b213f7
+2025-10-05 11:28:49,971 - app.crud - INFO - Creating fare for flight: 2c0e95ec-a54c-416e-b413-870801d35d86
+2025-10-05 11:28:49,979 - app.crud - INFO - Fare created with ID: 629c3907-362f-4f48-b239-bd57b6a3c11d
+2025-10-05 11:28:49,980 - app.crud - INFO - Creating fare for flight: afa56300-b1a2-4d85-906b-a145f2b14fa9
+2025-10-05 11:28:49,985 - app.crud - INFO - Fare created with ID: 1997aed9-257b-43a9-9a4b-a7ce3a9b3563
+2025-10-05 11:28:49,985 - app.crud - INFO - Creating fare for flight: afa56300-b1a2-4d85-906b-a145f2b14fa9
+2025-10-05 11:28:49,989 - app.crud - INFO - Fare created with ID: 40b88203-ae58-481a-b280-cab9254197c7
+2025-10-05 11:28:49,989 - app.etl.loaders - INFO - Загрузка тарифов завершена: {'total_processed': 4, 'fares_created': 4, 'errors': []}
+2025-10-05 11:28:49,991 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\fares_errors_20251005_112849.csv
+2025-10-05 11:28:49,991 - __main__ - INFO - Обработка рейсов завершена: 2 рейсов, 4 тарифов
+2025-10-05 11:28:49,991 - __main__ - INFO - Обработка файла: test_passengers.csv
+2025-10-05 11:28:49,991 - __main__ - INFO - Начало обработки файла пассажиров: test_passengers.csv
+2025-10-05 11:28:49,993 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\test_passengers.csv
+2025-10-05 11:28:49,993 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 11:28:49,995 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-05 11:28:50,002 - app.crud - INFO - Creating passenger: Иван Иванов
+2025-10-05 11:28:50,012 - app.crud - INFO - Passenger created with ID: b722ead4-61a4-4287-b177-cb910fe02ef8
+2025-10-05 11:28:50,012 - app.crud - INFO - Creating passenger document for passenger: b722ead4-61a4-4287-b177-cb910fe02ef8
+2025-10-05 11:28:50,029 - app.crud - INFO - Passenger document created with ID: d125e332-a1aa-48ca-b5a0-d69723a2a7f8
+2025-10-05 11:28:50,029 - app.etl.loaders - INFO - Загрузка пассажиров завершена: {'total_processed': 1, 'passengers_created': 1, 'documents_created': 1, 'errors': []}
+2025-10-05 11:28:50,031 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\passengers_errors_20251005_112850.csv
+2025-10-05 11:28:50,031 - __main__ - INFO - Обработка пассажиров завершена: 1 успешно, 5 с ошибками
+2025-10-05 11:28:50,812 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251005_112850.png
+2025-10-05 11:28:50,813 - __main__ - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_112850.json
+2025-10-05 11:28:50,813 - __main__ - INFO - ETL-конвейер завершен
+2025-10-05 11:53:13,221 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: data/input\859c8b6b-fad6-4a79-8e7a-3204d8ffeacc_test_passengers.csv
+2025-10-05 11:53:13,222 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров data/input\859c8b6b-fad6-4a79-8e7a-3204d8ffeacc_test_passengers.csv: Файл не найден: data/input\data/input\859c8b6b-fad6-4a79-8e7a-3204d8ffeacc_test_passengers.csv
+2025-10-05 11:55:59,219 - main - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-05 11:58:42,759 - main - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-05 11:58:43,942 - main - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-05 11:58:44,437 - main - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-05 11:59:32,781 - main - ERROR - Health check failed: Textual SQL expression 'SELECT 1' should be explicitly declared as text('SELECT 1')
+2025-10-05 12:04:09,765 - app.crud - INFO - Deleting passenger with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:04:09,766 - app.crud - INFO - Fetching passenger with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:05:58,190 - app.crud - INFO - Deleting passenger document with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:05:58,190 - app.crud - INFO - Fetching passenger document with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:05:58,212 - app.crud - WARNING - Passenger document with ID 89864de9-b1de-434d-ad52-171a5ac98d75 not found for deletion
+2025-10-05 12:06:14,212 - app.crud - INFO - Deleting passenger with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:06:14,212 - app.crud - INFO - Fetching passenger with ID: 89864de9-b1de-434d-ad52-171a5ac98d75
+2025-10-05 12:10:29,174 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 12:10:29,175 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 12:10:29,175 - app.etl.extractors - INFO - Найдено файлов для обработки: ['test_flights.xlsx', 'test_passengers.csv']
+2025-10-05 12:10:29,175 - app.etl.orchestrator - INFO - Обработка файла: test_flights.xlsx
+2025-10-05 12:10:29,175 - app.etl.orchestrator - INFO - Начало обработки файла рейсов: test_flights.xlsx
+2025-10-05 12:10:29,336 - app.etl.extractors - INFO - Успешно извлечено 6 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 12:10:29,337 - app.etl.extractors - INFO - Извлечены данные рейсов: 6 записей
+2025-10-05 12:10:29,339 - app.etl.transformers - INFO - Трансформация рейсов завершена: 2 валидных, 4 с ошибками
+2025-10-05 12:10:29,339 - app.crud - INFO - Creating flight: SU-1001
+2025-10-05 12:10:29,585 - app.crud - INFO - Flight created with ID: c42e85ce-33fd-4e7d-b0b9-e45bcc5fc27f
+2025-10-05 12:10:29,585 - app.crud - INFO - Creating flight: SU-1002
+2025-10-05 12:10:29,590 - app.crud - INFO - Flight created with ID: aa8b40f4-dfbc-400b-b90a-231b488d8c38
+2025-10-05 12:10:29,590 - app.etl.loaders - INFO - Загрузка рейсов завершена: {'total_processed': 2, 'flights_created': 2, 'errors': []}
+2025-10-05 12:10:29,593 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\flights_errors_20251005_121029.csv
+2025-10-05 12:10:29,596 - app.etl.extractors - INFO - Успешно извлечено 5 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 12:10:29,597 - app.etl.extractors - INFO - Извлечены данные тарифов: 5 записей
+2025-10-05 12:10:29,598 - app.etl.transformers - INFO - Трансформация тарифов завершена: 4 валидных, 1 с ошибками
+2025-10-05 12:10:29,598 - app.crud - INFO - Creating fare for flight: c42e85ce-33fd-4e7d-b0b9-e45bcc5fc27f
+2025-10-05 12:10:29,610 - app.crud - INFO - Fare created with ID: e0b33c30-9e06-4d14-bb3b-cd1eb4a24326
+2025-10-05 12:10:29,610 - app.crud - INFO - Creating fare for flight: c42e85ce-33fd-4e7d-b0b9-e45bcc5fc27f
+2025-10-05 12:10:29,617 - app.crud - INFO - Fare created with ID: 9ff397b7-2cdb-4687-8af9-d35d5cd13f29
+2025-10-05 12:10:29,618 - app.crud - INFO - Creating fare for flight: aa8b40f4-dfbc-400b-b90a-231b488d8c38
+2025-10-05 12:10:29,621 - app.crud - INFO - Fare created with ID: 1848e534-70fd-44d2-85ff-f032a278984b
+2025-10-05 12:10:29,621 - app.crud - INFO - Creating fare for flight: aa8b40f4-dfbc-400b-b90a-231b488d8c38
+2025-10-05 12:10:29,625 - app.crud - INFO - Fare created with ID: b04fa8b9-8195-4959-813c-252ca7acae6a
+2025-10-05 12:10:29,626 - app.etl.loaders - INFO - Загрузка тарифов завершена: {'total_processed': 4, 'fares_created': 4, 'errors': []}
+2025-10-05 12:10:29,627 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\fares_errors_20251005_121029.csv
+2025-10-05 12:10:29,627 - app.etl.orchestrator - INFO - Обработка рейсов завершена: 2 рейсов, 4 тарифов
+2025-10-05 12:10:29,627 - app.etl.orchestrator - INFO - Обработка файла: test_passengers.csv
+2025-10-05 12:10:29,627 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: test_passengers.csv
+2025-10-05 12:10:29,629 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\test_passengers.csv
+2025-10-05 12:10:29,629 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 12:10:29,631 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-05 12:10:29,637 - app.crud - INFO - Creating passenger: Иван Иванов
+2025-10-05 12:10:29,648 - app.crud - INFO - Passenger created with ID: 1ad77150-fef8-4a56-af81-db7bf657c7a5
+2025-10-05 12:10:29,648 - app.crud - INFO - Creating passenger document for passenger: 1ad77150-fef8-4a56-af81-db7bf657c7a5
+2025-10-05 12:10:29,664 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров test_passengers.csv: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Нарушено "UK_Passenger_Document_Number" ограничения UNIQUE KEY. Не удается вставить повторяющийся ключ в объект "dbo.Passenger_Document". Повторяющееся значение ключа: (1, 1234567890, RUS). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO [Passenger_Document] (passenger_id, document_type_id, document_number, expiry_date, country_of_issue) OUTPUT inserted.document_id, inserted.created_datetime VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('1ad77150-fef8-4a56-af81-db7bf657c7a5'), 1, '1234567890', datetime.datetime(2025, 12, 31, 0, 0), 'RUS')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2025-10-05 12:10:30,275 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251005_121029.png
+2025-10-05 12:10:30,277 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_121030.json
+2025-10-05 12:10:30,277 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-05 12:53:45,294 - app.crud - INFO - Creating passenger: string string
+2025-10-05 12:53:45,350 - app.crud - INFO - Passenger created with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:54:32,016 - app.crud - INFO - Updating passenger with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:54:32,017 - app.crud - INFO - Fetching passenger with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:54:32,052 - app.crud - INFO - Passenger with ID 3a882573-5629-40b9-8927-4634e6372072 updated successfully
+2025-10-05 12:54:50,927 - app.crud - INFO - Fetching passenger with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:55:00,534 - app.crud - INFO - Deleting passenger with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:55:00,534 - app.crud - INFO - Fetching passenger with ID: 3a882573-5629-40b9-8927-4634e6372072
+2025-10-05 12:55:00,561 - app.crud - INFO - Passenger with ID 3a882573-5629-40b9-8927-4634e6372072 deleted successfully
+2025-10-05 12:58:25,449 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 12:58:25,449 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 12:58:25,449 - app.etl.extractors - INFO - Найдено файлов для обработки: ['test_flights.xlsx', 'test_passengers.csv']
+2025-10-05 12:58:25,449 - app.etl.orchestrator - INFO - Обработка файла: test_flights.xlsx
+2025-10-05 12:58:25,450 - app.etl.orchestrator - INFO - Начало обработки файла рейсов: test_flights.xlsx
+2025-10-05 12:58:25,626 - app.etl.extractors - INFO - Успешно извлечено 6 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 12:58:25,627 - app.etl.extractors - INFO - Извлечены данные рейсов: 6 записей
+2025-10-05 12:58:25,631 - app.etl.transformers - INFO - Трансформация рейсов завершена: 2 валидных, 4 с ошибками
+2025-10-05 12:58:25,631 - app.crud - INFO - Creating flight: SU-1001
+2025-10-05 12:58:28,022 - app.crud - INFO - Flight created with ID: 357a835a-e049-495b-86c9-d57340bc89b0
+2025-10-05 12:58:28,022 - app.crud - INFO - Creating flight: SU-1002
+2025-10-05 12:58:28,025 - app.crud - INFO - Flight created with ID: 36ca1113-d812-4ba4-8694-fc028140ddb6
+2025-10-05 12:58:28,026 - app.etl.loaders - INFO - Загрузка рейсов завершена: {'total_processed': 2, 'flights_created': 2, 'errors': []}
+2025-10-05 12:58:28,028 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\flights_errors_20251005_125828.csv
+2025-10-05 12:58:28,032 - app.etl.extractors - INFO - Успешно извлечено 5 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 12:58:28,033 - app.etl.extractors - INFO - Извлечены данные тарифов: 5 записей
+2025-10-05 12:58:28,034 - app.etl.transformers - INFO - Трансформация тарифов завершена: 4 валидных, 1 с ошибками
+2025-10-05 12:58:28,034 - app.crud - INFO - Creating fare for flight: 357a835a-e049-495b-86c9-d57340bc89b0
+2025-10-05 12:58:28,046 - app.crud - INFO - Fare created with ID: 357b35e8-c3b6-42c9-a982-4ac669efeb6b
+2025-10-05 12:58:28,047 - app.crud - INFO - Creating fare for flight: 357a835a-e049-495b-86c9-d57340bc89b0
+2025-10-05 12:58:28,052 - app.crud - INFO - Fare created with ID: 91520dc8-2ec5-4a9c-ac06-3a2ef97bc4e3
+2025-10-05 12:58:28,052 - app.crud - INFO - Creating fare for flight: 36ca1113-d812-4ba4-8694-fc028140ddb6
+2025-10-05 12:58:28,055 - app.crud - INFO - Fare created with ID: 06607de1-dd9b-4621-ab9a-923ce1da77e0
+2025-10-05 12:58:28,055 - app.crud - INFO - Creating fare for flight: 36ca1113-d812-4ba4-8694-fc028140ddb6
+2025-10-05 12:58:28,058 - app.crud - INFO - Fare created with ID: 2b135338-0884-4c7c-9d0c-df57f9a92392
+2025-10-05 12:58:28,058 - app.etl.loaders - INFO - Загрузка тарифов завершена: {'total_processed': 4, 'fares_created': 4, 'errors': []}
+2025-10-05 12:58:28,060 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\fares_errors_20251005_125828.csv
+2025-10-05 12:58:28,060 - app.etl.orchestrator - INFO - Обработка рейсов завершена: 2 рейсов, 4 тарифов
+2025-10-05 12:58:28,060 - app.etl.orchestrator - INFO - Обработка файла: test_passengers.csv
+2025-10-05 12:58:28,060 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: test_passengers.csv
+2025-10-05 12:58:28,063 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\test_passengers.csv
+2025-10-05 12:58:28,063 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 12:58:28,066 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-05 12:58:28,073 - app.crud - INFO - Creating passenger: Иван Иванов
+2025-10-05 12:58:28,083 - app.crud - INFO - Passenger created with ID: e1030461-3289-47e8-891f-c1582a086ecd
+2025-10-05 12:58:28,083 - app.crud - INFO - Creating passenger document for passenger: e1030461-3289-47e8-891f-c1582a086ecd
+2025-10-05 12:58:28,091 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров test_passengers.csv: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Нарушено "UK_Passenger_Document_Number" ограничения UNIQUE KEY. Не удается вставить повторяющийся ключ в объект "dbo.Passenger_Document". Повторяющееся значение ключа: (1, 1234567890, RUS). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO [Passenger_Document] (passenger_id, document_type_id, document_number, expiry_date, country_of_issue) OUTPUT inserted.document_id, inserted.created_datetime VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('e1030461-3289-47e8-891f-c1582a086ecd'), 1, '1234567890', datetime.datetime(2025, 12, 31, 0, 0), 'RUS')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2025-10-05 12:58:28,811 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251005_125828.png
+2025-10-05 12:58:28,812 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_125828.json
+2025-10-05 12:58:28,812 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-05 13:03:18,339 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: data/input\ae6993a4-b98c-4ebe-b041-fb99ee20e43d_passengers_comprehensive.csv
+2025-10-05 13:03:18,340 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров data/input\ae6993a4-b98c-4ebe-b041-fb99ee20e43d_passengers_comprehensive.csv: Файл не найден: data/input\data/input\ae6993a4-b98c-4ebe-b041-fb99ee20e43d_passengers_comprehensive.csv
+2025-10-05 13:04:05,171 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: data/input\9b5cb614-78b3-4820-af20-1a3671541c03_passengers_basic_errors.csv
+2025-10-05 13:04:05,171 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров data/input\9b5cb614-78b3-4820-af20-1a3671541c03_passengers_basic_errors.csv: Файл не найден: data/input\data/input\9b5cb614-78b3-4820-af20-1a3671541c03_passengers_basic_errors.csv
+2025-10-05 13:05:28,019 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 13:05:28,019 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 13:05:28,019 - app.etl.extractors - INFO - Найдено файлов для обработки: ['passengers_basic_errors.csv']
+2025-10-05 13:05:28,019 - app.etl.orchestrator - INFO - Обработка файла: passengers_basic_errors.csv
+2025-10-05 13:05:28,019 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: passengers_basic_errors.csv
+2025-10-05 13:05:28,022 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\passengers_basic_errors.csv
+2025-10-05 13:05:28,022 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue', 'flight_number', 'fare_class', 'booking_status']
+2025-10-05 13:05:28,024 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-05 13:05:28,315 - app.crud - INFO - Creating passenger: Анна Волкова
+2025-10-05 13:05:28,330 - app.crud - INFO - Passenger created with ID: 820d7348-4bc8-456b-b2ab-b94348777f53
+2025-10-05 13:05:28,330 - app.crud - INFO - Creating passenger document for passenger: 820d7348-4bc8-456b-b2ab-b94348777f53
+2025-10-05 13:05:28,341 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров passengers_basic_errors.csv: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Нарушено "UK_Passenger_Document_Number" ограничения UNIQUE KEY. Не удается вставить повторяющийся ключ в объект "dbo.Passenger_Document". Повторяющееся значение ключа: (1, 1234567890, RUS). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO [Passenger_Document] (passenger_id, document_type_id, document_number, expiry_date, country_of_issue) OUTPUT inserted.document_id, inserted.created_datetime VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('820d7348-4bc8-456b-b2ab-b94348777f53'), 1, '1234567890', datetime.datetime(2025, 12, 31, 0, 0), 'RUS')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2025-10-05 13:05:28,595 - app.etl.loaders - ERROR - Ошибка при создании дашборда: need at least one array to concatenate
+2025-10-05 13:05:28,596 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_130528.json
+2025-10-05 13:05:28,596 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-05 13:11:42,781 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 13:11:42,781 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 13:11:42,781 - app.etl.extractors - INFO - Найдено файлов для обработки: ['test_flights.xlsx', 'test_passengers.csv']
+2025-10-05 13:11:42,781 - app.etl.orchestrator - INFO - Обработка файла: test_flights.xlsx
+2025-10-05 13:11:42,781 - app.etl.orchestrator - INFO - Начало обработки файла рейсов: test_flights.xlsx
+2025-10-05 13:11:42,951 - app.etl.extractors - INFO - Успешно извлечено 6 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 13:11:42,952 - app.etl.extractors - INFO - Извлечены данные рейсов: 6 записей
+2025-10-05 13:11:42,954 - app.etl.transformers - INFO - Трансформация рейсов завершена: 2 валидных, 4 с ошибками
+2025-10-05 13:11:42,954 - app.crud - INFO - Creating flight: SU-1001
+2025-10-05 13:11:43,374 - app.crud - INFO - Flight created with ID: a93799ee-34c5-4f19-966f-7871b26604bc
+2025-10-05 13:11:43,374 - app.crud - INFO - Creating flight: SU-1002
+2025-10-05 13:11:43,378 - app.crud - INFO - Flight created with ID: 57e0c734-f859-4af3-a633-0f4a15635dec
+2025-10-05 13:11:43,379 - app.etl.loaders - INFO - Загрузка рейсов завершена: {'total_processed': 2, 'flights_created': 2, 'errors': []}
+2025-10-05 13:11:43,383 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\flights_errors_20251005_131143.csv
+2025-10-05 13:11:43,388 - app.etl.extractors - INFO - Успешно извлечено 5 записей из Excel: data/input\test_flights.xlsx
+2025-10-05 13:11:43,388 - app.etl.extractors - INFO - Извлечены данные тарифов: 5 записей
+2025-10-05 13:11:43,390 - app.etl.transformers - INFO - Трансформация тарифов завершена: 4 валидных, 1 с ошибками
+2025-10-05 13:11:43,390 - app.crud - INFO - Creating fare for flight: a93799ee-34c5-4f19-966f-7871b26604bc
+2025-10-05 13:11:43,408 - app.crud - INFO - Fare created with ID: f63caddd-aef4-4c79-b07a-53e2e3413ae7
+2025-10-05 13:11:43,408 - app.crud - INFO - Creating fare for flight: a93799ee-34c5-4f19-966f-7871b26604bc
+2025-10-05 13:11:43,417 - app.crud - INFO - Fare created with ID: feca7cb1-0f0f-48a2-8920-87bd62f48e8f
+2025-10-05 13:11:43,417 - app.crud - INFO - Creating fare for flight: 57e0c734-f859-4af3-a633-0f4a15635dec
+2025-10-05 13:11:43,421 - app.crud - INFO - Fare created with ID: bc7aa1ac-a6de-4005-8e0f-50bf757893f3
+2025-10-05 13:11:43,422 - app.crud - INFO - Creating fare for flight: 57e0c734-f859-4af3-a633-0f4a15635dec
+2025-10-05 13:11:43,426 - app.crud - INFO - Fare created with ID: 4282302e-db18-40d1-a23f-624b4fe76cfd
+2025-10-05 13:11:43,426 - app.etl.loaders - INFO - Загрузка тарифов завершена: {'total_processed': 4, 'fares_created': 4, 'errors': []}
+2025-10-05 13:11:43,429 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\fares_errors_20251005_131143.csv
+2025-10-05 13:11:43,429 - app.etl.orchestrator - INFO - Обработка рейсов завершена: 2 рейсов, 4 тарифов
+2025-10-05 13:11:43,429 - app.etl.orchestrator - INFO - Обработка файла: test_passengers.csv
+2025-10-05 13:11:43,429 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: test_passengers.csv
+2025-10-05 13:11:43,431 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\test_passengers.csv
+2025-10-05 13:11:43,431 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 13:11:43,434 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-05 13:11:43,443 - app.crud - INFO - Creating passenger: Джон Кейдж
+2025-10-05 13:11:43,456 - app.crud - INFO - Passenger created with ID: 110fe2aa-54b1-4d5a-8fe4-2d5f74444d73
+2025-10-05 13:11:43,456 - app.crud - INFO - Creating passenger document for passenger: 110fe2aa-54b1-4d5a-8fe4-2d5f74444d73
+2025-10-05 13:11:43,467 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров test_passengers.csv: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Нарушено "UK_Passenger_Document_Number" ограничения UNIQUE KEY. Не удается вставить повторяющийся ключ в объект "dbo.Passenger_Document". Повторяющееся значение ключа: (1, 1234567890, RUS). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO [Passenger_Document] (passenger_id, document_type_id, document_number, expiry_date, country_of_issue) OUTPUT inserted.document_id, inserted.created_datetime VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('110fe2aa-54b1-4d5a-8fe4-2d5f74444d73'), 1, '1234567890', datetime.datetime(2025, 12, 31, 0, 0), 'RUS')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2025-10-05 13:11:44,135 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251005_131143.png
+2025-10-05 13:11:44,136 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_131144.json
+2025-10-05 13:11:44,136 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-05 13:15:50,232 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 13:15:50,232 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 13:15:50,232 - app.etl.extractors - INFO - Найдено файлов для обработки: ['business_passengers.csv']
+2025-10-05 13:15:50,233 - app.etl.orchestrator - INFO - Обработка файла: business_passengers.csv
+2025-10-05 13:15:50,233 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: business_passengers.csv
+2025-10-05 13:15:50,235 - app.etl.extractors - INFO - Успешно извлечено 9 записей из CSV: data/input\business_passengers.csv
+2025-10-05 13:15:50,236 - app.etl.extractors - INFO - Извлечены данные пассажиров: 9 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 13:15:50,238 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 4 валидных, 5 с ошибками
+2025-10-05 13:15:50,500 - app.crud - INFO - Creating passenger: Алексей Петров
+2025-10-05 13:15:50,514 - app.crud - INFO - Passenger created with ID: ad358532-7157-4b77-b441-8f67a8e2fa6b
+2025-10-05 13:15:50,514 - app.crud - INFO - Creating passenger document for passenger: ad358532-7157-4b77-b441-8f67a8e2fa6b
+2025-10-05 13:15:50,526 - app.crud - INFO - Passenger document created with ID: 1ee93c9c-f5fc-469d-b297-7758d4da7fc0
+2025-10-05 13:15:50,527 - app.crud - INFO - Creating passenger: Михаил Волков
+2025-10-05 13:15:50,537 - app.crud - INFO - Passenger created with ID: 580eaebd-4508-4178-b5e9-55bf89d1c3ca
+2025-10-05 13:15:50,537 - app.crud - INFO - Creating passenger document for passenger: 580eaebd-4508-4178-b5e9-55bf89d1c3ca
+2025-10-05 13:15:50,540 - app.crud - INFO - Passenger document created with ID: 5740fec2-419f-40a5-b833-3e4fe0d5048b
+2025-10-05 13:15:50,540 - app.crud - INFO - Creating passenger: Ольга Орлова
+2025-10-05 13:15:50,545 - app.crud - INFO - Passenger created with ID: f199c5f5-3762-47c8-afd0-3bbb26eb35cf
+2025-10-05 13:15:50,545 - app.crud - INFO - Creating passenger document for passenger: f199c5f5-3762-47c8-afd0-3bbb26eb35cf
+2025-10-05 13:15:50,547 - app.crud - INFO - Passenger document created with ID: e8291787-11cb-4384-87f2-8f498fe0dbdc
+2025-10-05 13:15:50,548 - app.crud - INFO - Creating passenger: Анна Кузнецова
+2025-10-05 13:15:50,554 - app.crud - INFO - Passenger created with ID: 0a1e8813-0a9d-4516-b699-58c14e7481b7
+2025-10-05 13:15:50,554 - app.etl.loaders - INFO - Загрузка пассажиров завершена: {'total_processed': 4, 'passengers_created': 4, 'documents_created': 3, 'errors': ['Неизвестный тип документа: UNKNOWN_TYPE']}
+2025-10-05 13:15:50,556 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\passengers_errors_20251005_131550.csv
+2025-10-05 13:15:50,556 - app.etl.orchestrator - INFO - Обработка пассажиров завершена: 4 успешно, 5 с ошибками
+2025-10-05 13:15:51,203 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251005_131550.png
+2025-10-05 13:15:51,204 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_131551.json
+2025-10-05 13:15:51,204 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-05 13:16:26,111 - __main__ - INFO - Запуск ETL-процесса
+2025-10-05 13:16:26,111 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-05 13:16:26,112 - app.etl.extractors - INFO - Найдено файлов для обработки: ['business_passengers.csv']
+2025-10-05 13:16:26,112 - app.etl.orchestrator - INFO - Обработка файла: business_passengers.csv
+2025-10-05 13:16:26,112 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: business_passengers.csv
+2025-10-05 13:16:26,114 - app.etl.extractors - INFO - Успешно извлечено 9 записей из CSV: data/input\business_passengers.csv
+2025-10-05 13:16:26,114 - app.etl.extractors - INFO - Извлечены данные пассажиров: 9 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-05 13:16:26,117 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 4 валидных, 5 с ошибками
+2025-10-05 13:16:26,352 - app.crud - INFO - Creating passenger: Алексей Петров
+2025-10-05 13:16:26,364 - app.crud - INFO - Passenger created with ID: 7bff4792-2570-4583-adc4-cb7be2b912f6
+2025-10-05 13:16:26,364 - app.crud - INFO - Creating passenger document for passenger: 7bff4792-2570-4583-adc4-cb7be2b912f6
+2025-10-05 13:16:26,372 - app.crud - INFO - Creating passenger: Михаил Волков
+2025-10-05 13:16:26,373 - app.crud - INFO - Creating passenger: Ольга Орлова
+2025-10-05 13:16:26,373 - app.crud - INFO - Creating passenger: Анна Кузнецова
+2025-10-05 13:16:26,373 - app.etl.orchestrator - ERROR - Ошибка при обработке файла пассажиров business_passengers.csv: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Нарушено "UK_Passenger_Document_Number" ограничения UNIQUE KEY. Не удается вставить повторяющийся ключ в объект "dbo.Passenger_Document". Повторяющееся значение ключа: (1, 4001123456, RUS). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO [Passenger_Document] (passenger_id, document_type_id, document_number, expiry_date, country_of_issue) OUTPUT inserted.document_id, inserted.created_datetime VALUES (?, ?, ?, ?, ?)]
+[parameters: (UUID('7bff4792-2570-4583-adc4-cb7be2b912f6'), 1, '4001123456', datetime.datetime(2026, 8, 20, 0, 0), 'RUS')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2025-10-05 13:16:26,583 - app.etl.loaders - ERROR - Ошибка при создании дашборда: need at least one array to concatenate
+2025-10-05 13:16:26,584 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251005_131626.json
+2025-10-05 13:16:26,584 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-10-06 16:32:30,330 - __main__ - INFO - Запуск ETL-процесса
+2025-10-06 16:32:30,331 - app.etl.orchestrator - INFO - Запуск ETL-конвейера
+2025-10-06 16:32:30,331 - app.etl.extractors - INFO - Найдено файлов для обработки: ['basic_passengers.csv']
+2025-10-06 16:32:30,331 - app.etl.orchestrator - INFO - Обработка файла: basic_passengers.csv
+2025-10-06 16:32:30,331 - app.etl.orchestrator - INFO - Начало обработки файла пассажиров: basic_passengers.csv
+2025-10-06 16:32:30,338 - app.etl.extractors - INFO - Успешно извлечено 6 записей из CSV: data/input\basic_passengers.csv
+2025-10-06 16:32:30,339 - app.etl.extractors - INFO - Извлечены данные пассажиров: 6 записей, колонки: ['first_name', 'last_name', 'date_of_birth', 'email', 'phone_number', 'document_type', 'document_number', 'expiry_date', 'country_of_issue']
+2025-10-06 16:32:30,345 - app.etl.transformers - INFO - Трансформация пассажиров завершена: 1 валидных, 5 с ошибками
+2025-10-06 16:32:30,706 - app.crud - INFO - Creating passenger: Иван Иванов
+2025-10-06 16:32:30,728 - app.crud - INFO - Passenger created with ID: 8ce0963e-f5ae-4c04-8620-d64a8b9d3708
+2025-10-06 16:32:30,729 - app.crud - INFO - Creating passenger document for passenger: 8ce0963e-f5ae-4c04-8620-d64a8b9d3708
+2025-10-06 16:32:30,745 - app.crud - INFO - Passenger document created with ID: de5dbb66-836d-40dd-a9bf-1a739f990b85
+2025-10-06 16:32:30,745 - app.etl.loaders - INFO - Загрузка пассажиров завершена: {'total_processed': 1, 'passengers_created': 1, 'documents_created': 1, 'errors': []}
+2025-10-06 16:32:30,751 - app.etl.loaders - INFO - Отчет об ошибках сохранен: data/errors\passengers_errors_20251006_163230.csv
+2025-10-06 16:32:30,751 - app.etl.orchestrator - INFO - Обработка пассажиров завершена: 1 успешно, 5 с ошибками
+2025-10-06 16:32:32,146 - app.etl.loaders - INFO - Дашборд сохранен: data/output\etl_dashboard_20251006_163230.png
+2025-10-06 16:32:32,149 - app.etl.orchestrator - INFO - Итоговый отчет сохранен: data/output\etl_report_20251006_163232.json
+2025-10-06 16:32:32,149 - app.etl.orchestrator - INFO - ETL-конвейер завершен
+2025-12-04 22:00:46,056 - matplotlib.font_manager - INFO - generated new fontManager
+2025-12-04 22:18:04,793 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-12-04 22:30:31,346 - app.crud - INFO - Creating customer: РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡
+2025-12-04 22:30:53,643 - app.crud - INFO - Creating customer: РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡
+2025-12-04 22:30:56,553 - app.crud - INFO - Creating customer: РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡
+2025-12-04 22:33:26,045 - app.crud - INFO - Creating customer: РРІР°РЅРѕРІ РђРЅРґСЂРµР№ РРІР°РЅРѕРІРёС‡
+2025-12-04 22:33:26,051 - app.crud - INFO - Customer created with ID: 9defe6cc-e13f-42f3-afba-41ff841a163f
+2025-12-04 22:34:43,579 - app.crud - INFO - Fetching customers with skip: 5, limit: 100
+2025-12-04 22:36:19,161 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
+2025-12-04 22:36:20,179 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
+2025-12-04 22:36:24,229 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
+2025-12-04 22:36:42,599 - app.crud - INFO - Fetching customers with skip: 0, limit: 100
+2025-12-04 22:37:31,274 - app.crud - INFO - Fetching customer with ID: 207e6b98-4448-4698-939d-9fbedf898802

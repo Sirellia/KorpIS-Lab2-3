@@ -1,0 +1,7 @@
+first_name,last_name,date_of_birth,email,phone_number,document_type,document_number,expiry_date,country_of_issue
+Иван,Иванов,1990-05-15,ivan@mail.ru,89123456789,PASSPORT_RF,1234567890,2025-12-31,RUS
+,Петров,1985-08-20,petr@mail.ru,89223456789,INTERNATIONAL_PASSPORT,0987654321,2024-06-30,RUS
+,Сидоров,1995-12-31,sidorov@mail.ru,89333456789,PASSPORT_RF,1122334455,2023-01-01,RUS
+Мария,,1988-03-10,maria@mail.ru,89444456789,UNKNOWN_TYPE,5566778899,2026-03-15,RUS
+Анна,Волкова,invalid_date,anna@mail.ru,89555556789,PASSPORT_RF,9988776655,2025-08-20,RUS
+Сергей,Кузнецов,1978-07-22,invalid_email,89666656789,BIRTH_CERTIFICATE,4433221100,2022-12-31,RUS
